@@ -49,5 +49,10 @@ namespace CustomerRegister
         {
             return this.Register.Values.ToList<Customer>();
         }
+
+        public int GetSize()
+        {
+            return Register.Count;
+        }
     }
 }
