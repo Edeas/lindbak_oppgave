@@ -72,6 +72,7 @@ namespace CustomerRegister.Tests
             Register.UpdateEntry(c1);
             
             Assert.AreEqual(c1, Register.Get(0));
+            Assert.AreEqual(c1.FirstName, Register.Get(0).FirstName);
         }
     }
 }
