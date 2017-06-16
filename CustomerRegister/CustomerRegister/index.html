@@ -12,6 +12,13 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
+    <style>
+        .form-group {
+            background-color: rgba(0,0,0,0) !important;
+            border: none !important;
+        }
+    </style>
+
 
     <div class="container">
         <h1>Customer Register</h1>
@@ -29,11 +36,11 @@
             </thead>
             <tbody data-bind="foreach: customers">
                 <tr>
-                    <td input data-bind="text: email" contenteditable="true"></td>
-                    <td input data-bind="text: firstName" contenteditable="true"></td>
-                    <td input data-bind="text: lastName" contenteditable="true"></td>
-                    <td input data-bind="text: address" contenteditable="true"></td>
-                    <td input data-bind="text: postalCode" contenteditable="true"></td>
+                    <td><input class="form-group" data-bind="text: email, value: email" contenteditable="true"/></td>
+                    <td><input class="form-group" data-bind="text: firstName, value: firstName" contenteditable="true"/></td>
+                    <td><input class="form-group" data-bind="text: lastName, value: lastName" contenteditable="true"/></td>
+                    <td><input class="form-group" data-bind="text: address, value: address" contenteditable="true"/></td>
+                    <td><input class="form-group" data-bind="text: postalCode, value: postalCode" contenteditable="true"/></td>
                     <td><button class="btn btn-primary" data-bind="click: $root.updateCustomer">Update</button></td>
                     <td><button class="btn btn-primary" data-bind="click: $root.deleteCustomer">Remove</button></td>
                 </tr>
